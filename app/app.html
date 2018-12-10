@@ -4,7 +4,10 @@
     <meta charset="utf-8">
     <title>Hello Electron React!</title>
     <script>
-      (function() {
+      const debug = require('debug')('debug')
+
+      ;(function() {
+        debug({hot: process.env.HOT, debug: process.env.DEBUG})
         if (!process.env.HOT) {
           const link = document.createElement('link');
           link.rel = 'stylesheet';
