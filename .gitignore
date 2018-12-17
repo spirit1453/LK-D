@@ -52,3 +52,6 @@ npm-debug.log.*
 
 #doc
 esdoc
+
+#local
+local
