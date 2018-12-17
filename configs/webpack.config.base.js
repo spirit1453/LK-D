@@ -1,14 +1,15 @@
-/**
- * Base webpack config used across other specific configs
- */
 
-import path from 'path';
-import webpack from 'webpack';
-import { dependencies } from '../package.json';
+import path from 'path'
+import webpack from 'webpack'
+import { dependencies } from '../package.json'
 
+const debug = require('debug')('debug')
+
+const externals = Object.keys(dependencies || {})
+debug({externals})
 export default {
-  externals: [...Object.keys(dependencies || {})],
-
+  externals,
+  
   module: {
     rules: [
       {
@@ -44,4 +45,4 @@ export default {
 
     new webpack.NamedModulesPlugin()
   ]
-};
+}
