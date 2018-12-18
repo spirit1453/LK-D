@@ -13,9 +13,7 @@ type Props = {};
 
 export default class Home extends Component<Props> {
   props: Props
-
-
-
+  
   render() {
         // <Link to={routes.COUNTER}>to Counter</Link>
         

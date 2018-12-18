@@ -54,3 +54,8 @@ __snapshots__
 # Package.json
 package.json
 .travis.yml
+
+
+#custom
+# todo: shut eslint server down
+app/store/ElecSqlite.js

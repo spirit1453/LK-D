@@ -1,8 +1,8 @@
 
 const path = require("path");
 const fs = require('fs');
-const sqlite3 = require("../asars/sqlite3.asar");
-
+const sqlite3 = require("sqlite3");
+const {engine} = require('@lk/LK-C')
 let dbName = engine.getApplication().getCurrentApp().getName()||"default";
 
 let db = new sqlite3.cached.Database(path.join(__dirname, dbName+".db"));
