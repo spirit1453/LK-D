@@ -55,3 +55,6 @@ esdoc
 
 #local
 local
+
+#custom
+unversioned*

@@ -16,6 +16,10 @@ import log from 'electron-log'
 import MenuBuilder from './menu'
 
 const installer = require('electron-devtools-installer')
+const config = require('../config')
+
+const {dev: devConfig} = config
+const {maxmization, openDevtools, devToolsMode, fullscreen, waitToShow} = devConfig
 
 export default class AppUpdater {
   constructor() {
@@ -75,6 +79,9 @@ app.on('ready', async () => {
     width: 1024,
     height: 728
   })
+  if (maxmization) {
+    mainWindow.maximize()
+  }
 
   mainWindow.loadURL(`file://${__dirname}/app.html`)
 
@@ -87,8 +94,17 @@ app.on('ready', async () => {
     if (process.env.START_MINIMIZED) {
       mainWindow.minimize()
     } else {
-      mainWindow.show()
-      mainWindow.focus()
+      if (fullscreen) {
+        mainWindow.setFullScreen(true)
+      }
+      if (openDevtools) {
+        mainWindow.webContents.openDevTools({mode: devToolsMode})
+      }
+      setTimeout(() => {
+        mainWindow.show()
+        mainWindow.focus()
+      }, waitToShow)
+
     }
   })
 
