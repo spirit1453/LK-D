@@ -75,5 +75,5 @@ db.readFile = function (filePath) {
     })
 
 }
-
-module.exports = db;
+export default db
+// module.exports = db;

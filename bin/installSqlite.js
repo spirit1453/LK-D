@@ -1,6 +1,7 @@
 const path = require('path')
-const rootDir = path.resolve(__dirname, '../')
 const {ElectronUtil} = require('@ys/collection')
+
+const rootDir = path.resolve(__dirname, '../')
 const {installSqlite} = ElectronUtil
 
 const option = {
