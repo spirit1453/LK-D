@@ -6,7 +6,6 @@ import db from '../store/ElecSqlite'
 // import routes from '../constants/routes'
 import styles from './Home.less'
 
-console.log({styles})
 const {engine} = require('@lk/LK-C')
 
 const LKApplication = engine.getApplication()
