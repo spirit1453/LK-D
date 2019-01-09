@@ -1,4 +1,6 @@
 {
-  "HOME": "/",
-  "COUNTER": "/counter"
+  "HOME": "/HOME",
+  "COUNTER": "/counter",
+  "ENTRY": "/",
+  "main": "/main"
 }
