@@ -4,8 +4,9 @@ import db from '../store/ElecSqlite'
 
 // import { Link } from 'react-router-dom'
 // import routes from '../constants/routes'
-import styles from './Home.css'
+import styles from './Home.less'
 
+console.log({styles})
 const {engine} = require('@lk/LK-C')
 
 const LKApplication = engine.getApplication()

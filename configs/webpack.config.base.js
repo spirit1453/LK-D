@@ -9,7 +9,7 @@ const externals = Object.keys(dependencies || {})
 debug({externals})
 export default {
   externals,
-  
+
   module: {
     rules: [
       {
@@ -21,6 +21,22 @@ export default {
             cacheDirectory: true
           }
         }
+      },
+      {
+        test: /\.less$/,
+        use: [{
+          loader: "style-loader"
+        }, {
+          loader: 'css-loader',
+          options: {
+            sourceMap: process.env.NODE_ENV === 'development',
+            minimize: process.env.NODE_ENV === 'production',
+            modules: true,
+            localIdentName: '[name]__[local]-[hash:base64:5]'
+          }
+        }, {
+          loader: 'less-loader'
+        }]
       }
     ]
   },
