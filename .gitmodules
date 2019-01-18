@@ -1,0 +1,3 @@
+[submodule "submodule/node_collection"]
+	path = submodule/node_collection
+	url = https://github.com/spirit1453/node_collection.git
