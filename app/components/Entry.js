@@ -13,7 +13,8 @@ export default class Entry extends Component<Props> {
   props: Props;
 
   onClick = () => {
-    this.props.history.push('/main')
+    console.log(require('@ys/collection'))
+    console.log(this.props)
   }
 
   render() {

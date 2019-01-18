@@ -58,3 +58,6 @@ local
 
 #custom
 unversioned*
+
+# mac
+._*
